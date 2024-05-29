@@ -1,0 +1,431 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.text-lightgray {
+  color: #d5d5d5;
+}
+
+.text-darkgray {
+  color: #7a7a7aff;
+}
+
+.bg-darkgray {
+  background-color: rgb(77, 77, 77);
+}
+
+.bg-whitegray {
+  background-color: #f3f3f3;
+}
+
+.bg-lighterblack {
+  background-color: #1a1a1a;
+}
+
+/* ---------------------Header----------------------- */
+
+.header {
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.visible-background {
+  background-color: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(5px);
+  color: var(--azul);
+  border-bottom: 3px solid var(--amarelo);
+}
+
+nav {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav img {
+  width: 200px;
+}
+
+.lista-navegacao {
+  list-style: none;
+  color: #d5d5d5;
+  font-weight: 500;
+  display: flex;
+  gap: 32px;
+  margin-bottom: 0;
+}
+
+.lista-navegacao li {
+  padding: 4px 24px;
+  border: 2px solid #d5d5d5;
+  border-radius: 30px;
+  align-self: center;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.lista-navegacao li:hover {
+  color: #848484;
+  background-color: #d5d5d5;
+}
+
+/* ---------------------Animated button----------------------- */
+
+.animated-button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #d5d5d5;
+  box-shadow: 0 0 0 2px #d5d5d5;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button span:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #30a900;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button span:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 5px #30a900;
+  color: #ffffff;
+}
+
+.animated-button:active {
+  scale: 0.95;
+}
+
+.hidden-sobre {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-20%);
+  transition: all 1s;
+}
+
+.show-sobre {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.hidden-sobre:nth-child(4) {
+  transition-delay: 200ms;
+}
+
+.logo-penedo {
+  width: 70%;
+}
+
+/*---------------------------------Hero-----------------------------------------*/
+
+.c-item {
+  height: 700px;
+}
+
+.c-img {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.carousel-item {
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+  transition: opacity 0s 0.5s;
+}
+
+#about {
+  background-image: url("../assets/bg-768x432.jpg");
+  height: 500px;
+}
+
+.about-txt p {
+  font-size: 18px;
+}
+
+.linha-horizontal {
+  display: block;
+  width: 50px;
+  height: 5px;
+  background-color: #d5d5d5;
+  margin-bottom: 10px;
+}
+
+/* -------------------------PROJETOS------------------------------------ */
+
+#projetos {
+  padding: 80px 0px;
+  position: relative;
+  overflow: hidden;
+}
+
+.barra-fundo-secao {
+  position: absolute;
+  height: 2000px;
+  width: 400px;
+  background-color: #f3f3f3;
+  z-index: 0;
+  top: 0;
+  left: 75%;
+}
+
+.hidden-projeto {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translateY(-20%);
+  transition: all 1s;
+}
+
+.show-projeto {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.hidden-projeto:nth-child(2) {
+  transition-delay: 300ms;
+}
+.hidden-projeto:nth-child(3) {
+  transition-delay: 500ms;
+}
+
+.hidden-projeto:nth-child(4) {
+  transition-delay: 300ms;
+}
+.hidden-projeto:nth-child(5) {
+  transition-delay: 500ms;
+}
+
+.hidden-projeto:nth-child(6) {
+  transition-delay: 500ms;
+}
+
+.projeto {
+  padding: 0;
+  position: relative;
+  height: 344px;
+  width: 385px;
+  max-height: 344px;
+  max-width: 385px;
+  background-color: #1a1a1a;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.titulo-projeto {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 600;
+  position: absolute;
+  top: 80%;
+  left: 15%;
+  transform: translate(-15%, -80%);
+  z-index: 10;
+  transition: 0.3s ease;
+}
+
+.projeto-img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+  opacity: 30%;
+  transition: 0.5s ease;
+}
+
+.barra-leitura {
+  background-color: #ffffff;
+  height: 50px;
+  width: 20px;
+  position: absolute;
+  top: 81%;
+  transform: translate(0%, -81%);
+  z-index: 9;
+  transition: 0.3s ease;
+  opacity: 90%;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.7);
+  border-radius: 0 10px 10px 0;
+}
+
+.projeto:hover .projeto-img {
+  opacity: 90%;
+}
+
+.projeto:hover .titulo-projeto {
+  color: #1a1a1a;
+}
+
+.projeto:hover .barra-leitura {
+  width: 300px;
+}
+
+/* ------------------------------------------------------------- */
+
+.info {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  opacity: 0%;
+  transition: 0.5s;
+}
+
+.img-div {
+  width: 400px;
+  height: 400px;
+}
+
+#tecnicos img {
+  position: absolute;
+  opacity: 7%;
+  right: 0%;
+}
+
+/* -----------------------------Clientes------------------------------ */
+
+#clientes {
+  padding: 50px 50px;
+}
+
+.clientes-container {
+  width: 100%;
+  margin: auto;
+}
+
+.clientes-galeria {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.slide-cliente {
+  width: 300px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slide-cliente img {
+  height: 100%; /* As imagens preenchem a altura do slide */
+  object-fit: cover; /* Mantém a proporção, sem cortar partes das imagens */
+}
+
+.slick-initialized .slick-slide {
+  display: flex;
+  flex-direction: row;
+}
+
+/* -----------------------------Footer------------------------------ */
+
+footer {
+  background-image: url("../assets/bg-768x432.jpg");
+  padding: 50px 0;
+  color: white;
+}
+
+footer img {
+  width: 15px;
+  margin-right: 5px;
+}
+
+.footer-logo {
+  width: 300px;
+}
+.contact-info {
+  list-style: none;
+  padding: 0;
+}
+.contact-info li {
+  margin-bottom: 5px;
+}
+
+/* -----------------------------Copyright------------------------------ */
+
+.copyright {
+  font-size: 14px;
+}
+
+@media (max-width: 1000px) {
+  .about-txt p {
+    font-size: 12px;
+  }
+
+  #tecnicos p {
+    font-size: 12px;
+  }
+
+  .info {
+    font-size: 14px;
+  }
+
+  .row-projects {
+    gap: 10px;
+  }
+
+  .c-proj-img {
+    width: 350px;
+    height: 250px;
+  }
+
+  .logos-slide {
+    display: inline-block;
+    animation: 15s slide infinite linear;
+  }
+
+  .footer-logo {
+    text-align: center;
+    width: 300px;
+    margin-bottom: 40px;
+  }
+
+  .copyright {
+    font-size: 12px;
+  }
+}

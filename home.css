@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #141414;
+  height: 100vh;
+  font-family: "Montserrat";
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo-penedo {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+  margin-bottom: 28px;
+}
+
+.logo-penedo img {
+  width: 180px;
+}
+
+h2 {
+  position: absolute;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 400;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.opcao {
+  max-width: 100%;
+  height: 580px;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.opcao img {
+  opacity: 40%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: 0.4s ease;
+}
+
+.opcao:hover img {
+  opacity: 100%;
+}
+
+footer {
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
